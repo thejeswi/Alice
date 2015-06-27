@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+{% block content %}
+<form method="POST" action="/configPage">
+    {{ form.hidden_tag() }}
+    <div>{{ form.siteTitle.label }}: {{ form.siteTitle() }}</div>
+    <br>
+    <div><input type="submit" name="Submit"></div>
+</form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+{% block content %}
+<ul>
+    {% for page in pages %}
+    <li><a href='/showPage/{{page.path}}'>{{page.title}}</a>
+    <a href="/editPage/{{page.path}}" class="btn btn-default btn-circle">Edit page</a>
+    <a href="/remove/{{page.path}}" class="btn btn-default btn-circle">Delete page</a>
+    </li><br>
+    {% endfor %}
+    <li><a href='/submit'>Add another page</a></li>
+</ul>
+{% endblock %}

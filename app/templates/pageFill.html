@@ -1,0 +1,26 @@
+{% extends "template.html" %}
+{% block content %}
+<form method="POST" action="">
+{{ form.hidden_tag() }}
+{{ form.title.label }} 
+<!--
+- For making a custom homepage, use page title "index"
+-->
+<br>
+{{ form.title(size=50) }}
+<br><br>
+{{ form.text.label }}
+<br>
+{{ form.text(cols="100", rows="100",class="ckeditor" )|safe}}
+Paste formatted text directly, or even HTML directly (Click on source in the editor).
+<br><br>
+{{ form.style.label }}<br>
+{{ form.style(cols="100", rows="10" )|safe}}
+<br><br>
+{{ form.color.label }}<br>
+{{ form.color(size=8) }} - Like #ff0000 for Red
+<br>
+<input type="submit" value="Save">
+</form>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+{% block content %}
+{{page.text|safe}}
+<br/>
+{% if current_user.is_authenticated() %}
+<a href="/editPage/{{page.path}}" class="btn btn-default btn-circle">Edit page</a>
+<a href="/remove/{{page.path}}" class="btn btn-default btn-circle">Delete page</a>
+{% endif %}
+{% endblock %}

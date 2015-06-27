@@ -1,0 +1,15 @@
+{% extends "template.html" %}
+{% block preHeader %}
+{% endblock %}
+{% block content %}
+{% if page %}
+<p>
+    {{page.text|safe}}
+</p>
+{% else %}
+<h1>Welcome to Alice 1.0!</h1>
+<p>
+You are seeing this because you maybe setting up for the first time.<br>Please login and add content to the homepage.
+</p>
+{% endif %}
+{% endblock %}

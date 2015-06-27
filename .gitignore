@@ -2,6 +2,12 @@
 __pycache__/
 *.py[cod]
 
+#Configurations
+deploy.cfg
+
+#Database
+*.db
+
 # C extensions
 *.so
 
